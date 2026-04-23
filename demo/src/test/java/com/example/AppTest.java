@@ -4,17 +4,26 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
     @Test
-    public void shouldAnswerWithTrue()
+    public void shouldCreateAGuerrero()
     {
-        assertTrue( true );
+        CreadorPersonaje creadorGuerrero = new CreadorGuerrero();
+        Personaje guerrero = creadorGuerrero.crearPersonaje();
+
+        assertTrue(guerrero.getTipo() == TipoPersonaje.GUERRERO);
+    }
+    public void shouldCreateAMago()
+    {
+        CreadorPersonaje creadorMago = new CreadorMago();
+        Personaje mago = creadorMago.crearPersonaje();
+        assertTrue(mago.getTipo() == TipoPersonaje.MAGO);
+    }
+    public void shouldCreateAnOrco()
+    {
+        CreadorPersonaje creadorOrco = new CreadorOrco();
+        Personaje orco = creadorOrco.crearPersonaje();
+        assertTrue(orco.getTipo() == TipoPersonaje.ORCO);
     }
 }

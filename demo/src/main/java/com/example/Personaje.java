@@ -11,6 +11,10 @@ public class Personaje {
 
     public Personaje() {
     }
+    public TipoPersonaje getTipo() {
+        return tipo;
+    }
+    
     public void setTipo(TipoPersonaje tipo) {
         this.tipo = tipo;
     }
