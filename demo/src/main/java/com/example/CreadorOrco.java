@@ -1,5 +1,7 @@
 package com.example;
 
+import java.util.List;
+
 public class CreadorOrco extends CreadorPersonaje {
     @Override
     protected void crearVida(Personaje personaje) {
@@ -8,8 +10,9 @@ public class CreadorOrco extends CreadorPersonaje {
 
     @Override
     protected void crearAtaques(Personaje personaje) {
-        //TODO personaje.setAtaques(new List<Ataque>.add("Golpe").add("Embiste"));
-    }
+    Ataque garra = new Ataque("Garra", 15, 5, new EstrategiaSimple());
+    Ataque embestida = new Ataque("Embestida", 25, 10, new EstrategiaAleatoria());
+    personaje.setAtaques(List.of(garra, embestida));}
 
     @Override
     protected void crearDefensa(Personaje personaje) {
