@@ -1,5 +1,6 @@
 package com.example;
 
 public interface EstrategiaDeModificador {
-    double calcularModificacion(double daño);
+    TipoModificador getTipo();
+    double calcularModificacion(double danioActual);
 }

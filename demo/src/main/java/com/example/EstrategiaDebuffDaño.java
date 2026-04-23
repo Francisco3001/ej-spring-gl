@@ -1,10 +1,20 @@
 package com.example;
 
-public class EstrategiaDebuffDaño implements EstrategiaDeModificador{
+public class EstrategiaDebuffDaño implements EstrategiaDeModificador {
+
+    private double valor;
+
+    public EstrategiaDebuffDaño(double valor) {
+        this.valor = valor;
+    }
 
     @Override
-    public double calcularModificacion(double daño) {
-        return daño*0.5;
+    public TipoModificador getTipo() {
+        return TipoModificador.DAÑO_RECBIDO;
     }
-    
+
+    @Override
+    public double calcularModificacion(double danioActual) {
+        return danioActual - valor;
+    }
 }
