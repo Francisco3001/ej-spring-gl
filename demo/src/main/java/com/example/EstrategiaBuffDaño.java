@@ -18,6 +18,3 @@ public class EstrategiaBuffDaño implements EstrategiaDeModificador{
         return danioActual + valor;
     }
 }
-
-    
-}
